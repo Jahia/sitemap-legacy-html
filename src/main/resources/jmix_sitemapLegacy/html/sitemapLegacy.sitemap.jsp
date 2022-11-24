@@ -38,9 +38,9 @@
       <a href='<c:url value="${url.base}${currentNode.path}.html"/>'>${currentNode.displayableName}</a>
   </c:otherwise>
 </c:choose>
-<c:forEach items="${jcr:getChildrenOfType(currentNode,'jmix:sitemap')}" var="child" varStatus="childStatus">
+<c:forEach items="${jcr:getChildrenOfType(currentNode,'jmix:sitemapLegacy')}" var="child" varStatus="childStatus">
     <c:if test="${childStatus.first}">
-        <ul <c:if test="${level eq 1}"><c:set var="nbSubItems" value="${jcr:getChildrenOfType(currentNode,'jmix:sitemap')}"/> id="primaryNav" class="col${fn:length(nbSubItems)}"</c:if>>
+        <ul <c:if test="${level eq 1}"><c:set var="nbSubItems" value="${jcr:getChildrenOfType(currentNode,'jmix:sitemapLegacy')}"/> id="primaryNav" class="col${fn:length(nbSubItems)}"</c:if>>
     </c:if>
     <template:module node="${child}" view="sitemap" editable="false">
         <template:param name="level" value="${level +1}"/>

@@ -16,26 +16,26 @@ global ExtractionService extractionService
 global Logger logger
 global JCRStoreProvider provider
 
-rule "Add sitemap mixin to page"
+rule "Add sitemapLegacy mixin to page"
     salience -10
     no-loop
     when
         A new node is created
             - it has the type jnt:page
-            - installed modules contains sitemap
+            - installed modules contains sitemap-legacy-html
             - not in operation import
     then
-        Add the type jmix:sitemap
+        Add the type jmix:sitemapLegacy
 end
 
-rule "Add sitemap mixin to menu label"
+rule "Add sitemapLegacy mixin to menu label"
     salience -10
     no-loop
     when
         A new node is created
             - it has the type jnt:navMenuText
-            - installed modules contains sitemap
+            - installed modules contains sitemap-legacy-html
             - not in operation import
     then
-        Add the type jmix:sitemap
+        Add the type jmix:sitemapLegacy
 end

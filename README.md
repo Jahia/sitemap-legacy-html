@@ -12,5 +12,5 @@ The purpose of this module is to allow you using the legacy html component provi
 ## How to use
  - Add the module to the site
  - Go to the page composer and do a right-click to add the component: Sitemap (Legacy): 
-	 - Choose the root of your sitemap then saveranslation from the current language to it
+	 - Choose the root of your sitemap then save
 
