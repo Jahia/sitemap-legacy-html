@@ -24,7 +24,8 @@
     </scm>
 
     <properties>
-        <jahia-depends>default</jahia-depends>
+        <jahia.plugin.version>6.10</jahia.plugin.version>    
+	<jahia-depends>default</jahia-depends>
         <require-capability>osgi.extender;filter:="(osgi.extender=org.jahia.bundles.blueprint.extender.config)"</require-capability>
     </properties>
 
